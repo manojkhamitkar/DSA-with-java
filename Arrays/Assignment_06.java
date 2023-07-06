@@ -3,17 +3,30 @@
 // elements and negative elements.
 
 import java.util.*;
-public void main change(int a[],int x){
-    for (int i =0;i<a.length;i++){
-        if(a[i] > a[i-1])
-        a[i]=a[i-1];
-
+public class Assignment_06 { 
+ public  static void reArrange(int[] arr) {
+    int left = 0;
+    int right = arr.length -1;
+    
+    while (left <= right) {
+        if (arr[left]>= 0){
+            left++;
+        }
+        else if(arr[right]< 0){
+            right--;
+        }else{ 
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
     }
 }
- public class Assignment_06 {
-    public static void main(String[] args) {
-        int a[] = {1,-1,3,2,-7,-5,11,6};
-        System.out.print(change(a[i]));
-    }
+   public static void main(String[] args) {
+    int[] arr = {1,-2,3,-4,5,-6,7,-8};
+    reArrange(arr);
 
- }
+   }
+}    
+   
