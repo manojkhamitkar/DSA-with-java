@@ -6,9 +6,17 @@ static void swap(int a,int b){
     System.out.println("Original values before swap");
     System.out.println("a "+a);
     System.out.println("b "+b);
+
+    // Metohd-1
     int temp =a;
     a=b;
     b=temp;
+
+    //method-2
+    a= a+b;
+    b=a-b;
+    a=a-b;
+
     System.out.println("Original values after swap");
     System.out.println("a "+a);
     System.out.println("b "+b);
