@@ -1,3 +1,4 @@
+// two pointer approach
 // Sort an Array consisting of only 0s and 1s.
 
 import java.io.*;
