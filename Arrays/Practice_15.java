@@ -1,6 +1,7 @@
 // Given an array arr[] of size N, find the prefix sum of the array. 
 
 import java.io.*;
+import java.util.Scanner;
 class Practice_15 {
     // Fills prefix sum array
     static void fillPrefixSum(int arr[], int n,int prefixSum[])
@@ -11,9 +12,15 @@ class Practice_15 {
         prefixSum[i] = prefixSum[i-1]+arr[i];
     }
     public static void main(String[] args) {
-        int arr[] = {10,4,16,20};
-        int n = arr.length;
-        int prefixSum[] = new int[n];
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of Array : ");
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        System.out.println("Enter "+ n +" elements");
+        for(int i = 0;i < n;i++){
+        arr[i] = sc.nextInt();
+        }
+       int prefixSum[] = new int[n];
 
         // Function call
         fillPrefixSum(arr, n, prefixSum);
