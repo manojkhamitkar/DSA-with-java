@@ -21,10 +21,10 @@ static int[] reverseArray(int[] arr){
     
 public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-    // int[] arr ={1,2,3,4,5};
-    // int[] ans= reverseArray(arr);
-    int[] arr = new int[n];
-    System.out.print("Enter Array Size : ");
+    int[] arr ={1,2,3,4,5};
+ int[] ans= reverseArray(arr);
+    // int[] arr = new int[n];
+    // System.out.print("Enter Array Size : ");
     
     
     printArray(ans);
