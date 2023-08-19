@@ -24,7 +24,14 @@ static void matrixAdd(int[][] a, int r1, int c1, int[][] b, int r2, int c2){
         sum[i][j] = a[i][j]+b[i][j];
     }
    }
-   System.out.right('Addition of two matixes is : '+sum[i][j]);
+   matrix(a);
+   System.out.print("Addition of two matixes is : "+sum[i][j]);
+}
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int r1 = sc.nextInt();
+    int r2 = sc.nextInt();
+
 }
     
 }
