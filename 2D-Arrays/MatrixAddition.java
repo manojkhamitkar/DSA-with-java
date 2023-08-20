@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class Practice_001 {
+public class MatrixAddition {
 
 public static void printMatrix(int[][] matrix){ 
 for (int i = 0; i < matrix.length ; i++){  //row
