@@ -15,18 +15,18 @@ public class Practice_1
        public static void existOfNumber(int[][] arr, int r, int c,int x) {
         for(int i =0;i < r; i++){
             for(int j =0; j< c; j++){
-                if(arr[i][j] != x){
-                    System.out.println("-1");
+                if(arr[i][j] == x){
+                    System.out.println("row "+i);
+                    System.out.println("Column "+j);
             }
             else {
-            System.out.println("row "+i);
-            System.out.println("Column "+j);
         }
-        
-        }
+    }
+    
         
 
     }   
+    System.out.println("-1");
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
