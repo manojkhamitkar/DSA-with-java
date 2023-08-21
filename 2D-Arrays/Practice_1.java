@@ -11,7 +11,22 @@ public class Practice_1
             }
          System.out.println();  
         }
-         
+    }
+       public static void existOfNumber(int[][] arr, int r, int c,int x) {
+        for(int i =0;i < r; i++){
+            for(int j =0; j< c; j++){
+                if(arr[i][j] != x){
+                    System.out.println("-1");
+            }
+            else {
+            System.out.println("row "+i);
+            System.out.println("Column "+j);
+        }
+        
+        }
+        
+
+    }   
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -27,7 +42,10 @@ public class Practice_1
             }
            
         }
-           printArray(arr);
+        printArray(arr);
+        System.out.print("Enter any number : ");
+        int x = sc.nextInt();
+        existOfNumber(arr, r, c, x);
         }
 
     }
