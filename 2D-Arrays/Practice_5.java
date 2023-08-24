@@ -15,5 +15,23 @@ public class Practice_5 {
                 arr[i][j] = sc.nextInt();
             }
         }
+        System.out.println("Enter element to check ");
+        int x = sc.nextInt();
+        int i = 0, j = c-1;
+        
+        while (i < r && j>=0){ 
+        if(arr[i][j]==x){
+        System.out.println(i);
+        System.out.println(j);
+        return;
+        
+        
+    
+                }if(arr[i][j] > x)
+                j--;
+                else
+                i++;
+            }
+                System.out.println(-1);
     }
 }
