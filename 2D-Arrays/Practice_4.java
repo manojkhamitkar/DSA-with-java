@@ -14,7 +14,23 @@ public class Practice_4 {
                 arr[i][j] = sc.nextInt();
             }
         }
-      
+      for(int i = 0; i < r; i++){
+        int a = 0;
+        int b = c-1;
+        while(a < b){
+            int temp = arr[i][a];
+            arr[i][a] = arr[i][b];
+            arr[i][b] = temp;
+            a++;
+            b--;
+        }
+      }
+      for(int i = 0; i < r; i++){
+        for(int j = 0; j < c; j++){
+            System.out.print(arr[i][j] + " ");
+        }
+        System.out.println();
+      }
 
     }
 }
