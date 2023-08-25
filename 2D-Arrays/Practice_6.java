@@ -14,6 +14,8 @@ public class Practice_6 {
                 arr[i][j] = sc.nextInt();
             }
         }
+         int i , j;
+
     }
     
 }
