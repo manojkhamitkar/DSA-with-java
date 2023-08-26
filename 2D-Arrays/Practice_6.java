@@ -14,7 +14,21 @@ public class Practice_6 {
                 arr[i][j] = sc.nextInt();
             }
         }
-         int i , j;
+        int trans[][] = new int[r][c];
+        for(int i = 0; i < r; i++){
+            for(int j = 0; j < c; j++){
+                trans[i][j] = arr[j][i];
+            }
+        }
+        for(int i =0; i < r; i++){
+            for(int j =0; j < c; j++){
+                System.out.print(trans[i][j] + " ");
+            }
+            System.out.println();
+        }
+        
+         
+
 
     }
     
