@@ -11,15 +11,26 @@ public class Practice_7 {
         }
     }
     public static void rotate(int arr[][], int n){
-        for (int i = 0; i < n/2; i++){
-            for(int j = i; j < n-i-1; j++){
-                int temp = arr[i][j];
-                arr[i][j] = arr[n-1-j][i];
-                arr[n-1-i][i] = arr[n-1-i][n-1-j];
-                arr[n-1-j][n-1-j] = arr[j][n-1-i];
-                arr[j][n-1-i] = temp;
+        /* apporch - 1 */
+        // for (int i = 0; i < n/2; i++){
+        //     for(int j = i; j < n-i-1; j++){
+        //         int temp = arr[i][j];
+        //         arr[i][j] = arr[n-1-j][i];
+        //         arr[n-1-i][i] = arr[n-1-i][n-1-j];
+        //         arr[n-1-j][n-1-j] = arr[j][n-1-i];
+        //         arr[j][n-1-i] = temp;
+        //     }
+        // }
+        /* apporch - 2 */
+        for(int j = 0; j < n; j++){
+            for( int i = n-1; i >= 0; i--){
+                System.out.print(arr[i][j] + " ");
+
             }
+            System.out.println();
+            
         }
+
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -35,7 +46,7 @@ public class Practice_7 {
         }
         
         rotate(arr1, n);
-        printArray(arr1);
+        
     }
     
 }
