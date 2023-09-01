@@ -2,7 +2,7 @@
 if every diagonal from top-left to bottom-right has the same elements. */
 
 import java.util.*;
-public class assignment_3 {
+public class Assignment_3 {
     static void printArray(int[][] arr){
       for(int i = 0 ; i < arr.length ; i++){
             for(int j = 0; j < arr[i].length; j++){
