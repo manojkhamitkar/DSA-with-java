@@ -17,6 +17,7 @@ public class Assignment_4 {
             int j = col;
             while (i >= 0 && j < m){
                 arr[idx] = mat[i][j];
+                idx++;
                 i--;
                 j++;
             }
@@ -27,8 +28,9 @@ public class Assignment_4 {
             }
         }
         for(int i =0; i < arr.length; i++){
-            System.out.println(arr[i] + " ");
+            System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
 }
     
