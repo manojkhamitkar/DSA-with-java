@@ -26,11 +26,9 @@ public class Practice_DSA_01 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a string : ");
         //string str1 = input.nextInt();
-        String str = new String();
-        for(int i = 1 ;i <=2; i++){
-           str = sc.nextLine();
-        }
-        System.out.println(str);
+       String str;
+        str = sc.nextLine();
+            System.out.println(str);
     }
     
 }
