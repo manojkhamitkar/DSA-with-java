@@ -28,7 +28,6 @@ public class Practice_DSA_01 {
         //string str1 = input.nextInt();
        String str;
         str = sc.nextLine();
-            System.out.println(str);
     }
     
 }
