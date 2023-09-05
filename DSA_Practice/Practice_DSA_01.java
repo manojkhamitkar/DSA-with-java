@@ -24,10 +24,32 @@ import java.util.*;
 public class Practice_DSA_01 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a string : ");
+        System.out.print("Enter a  two string : ");
         //string str1 = input.nextInt();
-       String str;
-        str = sc.nextLine();
+        String str1, str2;
+        str1 = sc.nextLine();
+        str2 = sc.nextLine();
+        String[] words = {str1,str2};
+        String[][] parts = new String[2][3];
+        for(int i =0; i < 2 ; i++)
+        {
+            int len = words[i].length();
+            if(len%3==0 || len%3==1)
+            {
+                parts[i][0] = words[i].substring(0, len/3);
+                parts[i][1] = words[i].substring(len/3, len-len/3);
+                parts[i][2] = words[i].substring(len-len/3);
+
+            }
+            else{
+                parts[i][0] = words[i].substring(0, len/3+1);
+                parts[i][1] = words[i].substring(len/3+1,len-len/3-1);
+                parts[i][2] = words[i].substring(len/3-1);
+            }
+           
+        }
+        System.out.println(parts[1][2]+parts[0][1]+parts[1][1]+parts[0][0]);
+    }
     }
     
-}
+
