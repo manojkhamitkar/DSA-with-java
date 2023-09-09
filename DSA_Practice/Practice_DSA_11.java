@@ -24,7 +24,7 @@ package DSA_Practice;
 
 import java.util.Scanner;
 
-public class Practice_DSA_02 {
+public class Practice_DSA_11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter input String-1 : ");

@@ -21,7 +21,7 @@ characters left, then part1 and part3 get the extra characters (as seen in above
 examples of "ABCDE" and "ABCDEFGH") */
 package DSA_Practice;
 import java.util.*;
-public class Practice_DSA_01 {
+public class Practice_DSA_12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a  two string : ");
