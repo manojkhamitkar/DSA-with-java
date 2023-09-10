@@ -18,11 +18,39 @@ input2=”Fever:filer:Filter: Fixer:fiber:fibre:tailor:offer”
 output= "FILER:FIXER FIBER” */
 package DSA_Practice;
 import java.util.*;
-public class Practice_DSA_01 {
+public class Practice_DSA_01{ 
+    private static String[] words;
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-       
-         
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter input1 :");
+        String input1 = sc.nextLine();
+        System.out.print("Enter input2:");
+        String input2 = sc.nextLine();
+        int i, j;
+        input1 = input1.toUpperCase();
+        input2 = input2.toUpperCase();
+        String word = "", res ="",
+        String[] words = input2.split(":");
+        for(i =0 ; i<words.length;i++)
+        {
+            word = words[i];
+            if(input1.length()==word.length())
+            {
+                for(j=0;j<input1.length();j++)
+                {
+                if(input1.charAt(j)!='_'&&input1.charAt(j)!=word.charAt(j))
+                {
+                    break;
+                }
+            }
+            if(j==input1.length())
+            {
+                res = res + word+":";
+            }
+        }
+        
     }
-    
+    }
 }
+
