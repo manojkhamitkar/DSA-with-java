@@ -1,4 +1,5 @@
-/* You are provided with TWO words. You are expected to split each word into THREE parts
+/* 
+You are provided with TWO words. You are expected to split each word into THREE parts
 each, and create a password using the below rule –
 Password = First part of word2 + First part of word1 + Third part of word1 + Third part
 of word2
