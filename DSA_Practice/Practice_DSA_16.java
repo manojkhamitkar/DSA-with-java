@@ -45,7 +45,7 @@ public class Practice_DSA_16 {
                 if(input1[i]<0)
                     {
                         flag=0;
-        input1[i]*=-1;
+                            input1[i]*=-1;
                     }
         digits = (int)(Math.log10(input1[i])+1);
         power = (int)(Math.pow(10, digits-1));
