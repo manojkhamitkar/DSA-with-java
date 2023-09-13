@@ -10,7 +10,7 @@ public class Assignment_4 {
                        {7,8,9}};
         int[] arr = new int[n*m]; 
         int idx = 0;
-        int row =  0;
+        int row = 0;
         int col = 0;
         while(col < m){
             int i = row;
