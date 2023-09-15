@@ -38,8 +38,8 @@ public class Practice_DSA_16 {
                     max=input1[i];
             }
         if(flag==0)
-        System.out.println(max);
-        int sign=-1, res=0, key, digits, power;
+            System.out.println(max);
+            int sign=-1, res=0, key, digits, power;
         i=0;
             while(i<input2 && flag==1)
             {
