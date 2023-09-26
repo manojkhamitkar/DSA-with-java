@@ -16,35 +16,35 @@ public class Practice_8 {
         while(totalelement < r * c){
 
             // toprow -> leftCol to rightCol
-            for(int j = leftCol ; j < rightCol; j++){
+            for(int j = leftCol ; j <= rightCol && totalelement < r*c; j++){
                 System.out.print(matrix[topRow][j] + " ");
                 totalelement++;
             }
             topRow++;
 
             // rightCol -> topRow to bottomRow
-            for(int i = topRow; i < bottowRow; i ++){
+            for(int i = topRow; i <= bottowRow && totalelement < r*c; i ++){
                 System.out.print(matrix[i][rightCol] + " ");
                 totalelement++;
             }
             rightCol--;
 
             //bottomrow -> rightCol to leftCol
-            for(int j = rightCol ; j >= leftCol; j --){
+            for(int j = rightCol ; j >= leftCol && totalelement < r*c; j --){
                 System.out.print(matrix[bottowRow][j] + " ");
                 totalelement++;
             }
             bottowRow--;
 
             // leftCol -> bottomCol to topCol
-            for(int i = bottowRow; i >= topRow ; i--){
+            for(int i = bottowRow; i >= topRow && totalelement < r*c ; i--){
                 System.out.print(matrix[i][leftCol] + " ");
                 totalelement++;
             }
             leftCol++;
         }
 
-       
+       System.out.println();
 
     }
     public static void main(String[] args) {
@@ -60,11 +60,12 @@ public class Practice_8 {
                 matrix[i][j] = sc.nextInt();
             }
         }
-        System.out.print("Input Matrix");
+        System.out.println("Input Matrix");
         printMatrix(matrix);
 
         System.out.println("Spiral Matrix");
         printSpiralOrder(matrix, r, c);
+        System.out.println();
     }
     
 }
