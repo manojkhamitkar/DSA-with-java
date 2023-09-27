@@ -44,7 +44,7 @@ public class Practice_8 {
             leftCol++;
         }
 
-       System.out.println();
+
 
     }
     public static void main(String[] args) {
@@ -65,7 +65,7 @@ public class Practice_8 {
 
         System.out.println("Spiral Matrix");
         printSpiralOrder(matrix, r, c);
-        System.out.println();
+        
     }
     
 }
