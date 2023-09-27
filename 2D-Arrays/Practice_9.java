@@ -10,36 +10,39 @@ public class Practice_9 {
             System.out.println();
         }
     }
-    static int[][] generateSpiralMatrix(int n){
+    public static int[][] generateSpiralMatrix(int n){
         int[][] matrix = new int[n][n];
         int topRow = 0 , bottowRow = n-1, leftCol = 0, rightCol = n-1;
         int curr = 1;
         while(curr <= n * n){ 
 
-        // topRow -> leftcol to rightCol
+       // toprow -> leftCol to rightCol
+       for(int j = leftCol ; j <= rightCol &&curr <=n*n; j++){
+        matrix[topRow][j] = curr++;
+       
+    }
+    topRow++;
+
+    // rightCol -> topRow to bottomRow
+    for(int i = topRow; i <= bottowRow && curr < n*n; i ++){
+        matrix[i][rightCol] = curr++;
         
-        for(int j = leftCol ; j <= rightCol && curr <= n*n; j++){
-            matrix[topRow][j] = curr++;
-        }
-        topRow++;
+    }
+    rightCol--;
 
-        // rightCol -> topRow to bottomRow
-        for(int i = topRow ; i <= bottowRow && curr < n*n; i++){
-            matrix[i][rightCol] = curr++;
-        }
-        topRow++;
+    //bottomrow -> rightCol to leftCol
+    for(int j = rightCol ; j >= leftCol && curr < n *n; j --){
+        matrix[bottowRow][j] = curr++;
+       
+    }
+    bottowRow--;
 
-        // bottomRow -> rightCol to leftCol
-        for(int j = rightCol ; j >= leftCol && curr < n*n; j++){
-            matrix[bottowRow][j] = curr++;
-        }
-        topRow++;
-
-        // leftCol -> bottomRow to topRow
-        for(int i = bottowRow ; i >= topRow && curr < n*n; i++){
-            matrix[i][leftCol] = curr++;
-        }
-        topRow++;
+    // leftCol -> bottomCol to topCol
+    for(int i = bottowRow; i >= topRow && curr < n*n ; i--){
+       matrix[i][leftCol] = curr++;
+        
+    }
+    leftCol++;
         
     }
     return matrix;
