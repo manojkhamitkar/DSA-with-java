@@ -3,6 +3,8 @@
  */
 import java.util.*;
 public class Practice_2DArray_10 {
+
+    // apporoach-1 to find rectangle matrix sum.
     static int findSum1(int[][] matrix , int l1, int r1 , int l2 , int r2){
         int sum = 0;
         for(int i = l1; i <= l2;i++){
@@ -12,22 +14,29 @@ public class Practice_2DArray_10 {
         }
     return sum;
     }
-    static void findPrefixSum(int[][] matrix){
+    static void findPrefixSumMatrix(int[][] matrix){
         int r = matrix.length;
         int c = matrix[0].length;
 
         //traverse horizonatally to calculate row-wise prefix sum
         for(int i = 0; i < r ; i++){
             for(int j = 0; j < c; j++){
-                matrix[i][j] +=matrix[i][j-1];
+                matrix[i][j] += matrix[i][j-1];
             }
         }
     }
+    // Apporoach-2 to find rectangle matrix sum.
        static int findSum2(int[][] matrix , int l1, int r1 , int l2 , int r2){
         int sum = 0;
-        findPrefixSum(matrix);
+        findPrefixSumMatrix(matrix);
 
-        for(int i = l1 ; i < l2 ; i++){
+        for(int i = l1 ; i <= l2 ; i++){
+            if(r1 >= 1)
+            // r1 to r2 sum for row i
+                sum += matrix[i][r2] - matrix[i][r1-1];
+            else
+            sum += matrix[i][r2];
+        
 
         }
         return sum;
