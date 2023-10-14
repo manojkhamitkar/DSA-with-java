@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Recursion_04 {
     static int fabonacci(int n) {
         if (n == 0 || n == 1) {
@@ -7,7 +9,9 @@ public class Recursion_04 {
     }
 
     public static void main(String[] args) {
-
-        System.out.println(fabonacci(5));
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number :");
+        int n = sc.nextInt();
+        System.out.println(n + "th Fabonacci number of  " + fabonacci(5));
     }
 }
