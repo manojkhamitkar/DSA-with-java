@@ -40,7 +40,7 @@ package DSA_Practice;
 
 import java.util.*;
 
-public class Practice_DSA_031 {
+public class Practice_DSA_036 {
     public static void Hill(int input1, int input2, int input3) {
         int hash;
         hash = input2;
