@@ -5,9 +5,9 @@ import java.util.*;
 
 public class Recursion_14 {
     static int gcd(int a, int b) {
-        if (b == 0)
+        if (b == 0) // base case
             return a;
-        return gcd(b, a % b);
+        return gcd(b, a % b); // recursive work
 
     }
 
