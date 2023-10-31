@@ -3,20 +3,23 @@
 import java.util.*;
 
 public class GFG_03 {
-    static void moveZeroesTOEnd(int[] arr, int n) {
-
-    }
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter array size");
-        int n = sc.nextInt();
-        System.out.println("Enter array elements");
-        int[] arr = new int[n];
+        int[] arr = { 1, 2, 0, 0, 4, 0, 6 };
+        int n = arr.length;
+        int index = 0;
         for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+            if (arr[i] > 0) {
+                if (arr[index] == 0) {
+                    arr[index] = arr[i];
+                    arr[i] = 0;
+                }
+                index++;
+               // System.out.print(arr[index] + " ");
+            }
+             System.out.print(arr[index] + " ");
+            }
         }
-        moveZeroesTOEnd(arr, n);
 
+        // System.out.println(arr[index]);
     }
 }
