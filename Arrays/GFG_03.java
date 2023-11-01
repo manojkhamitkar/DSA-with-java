@@ -3,9 +3,8 @@
 import java.util.*;
 
 public class GFG_03 {
-    public static void main(String[] args) {
-        int[] arr = { 1, 2, 0, 0, 4, 0, 6 };
-        int n = arr.length;
+    static void moveZerosToEnd(int[] arr, int n) {
+
         int index = 0;
         for (int i = 0; i < n; i++) {
             if (arr[i] > 0) {
@@ -14,12 +13,22 @@ public class GFG_03 {
                     arr[i] = 0;
                 }
                 index++;
-               // System.out.print(arr[index] + " ");
-            }
-             System.out.print(arr[index] + " ");
             }
         }
-
-        // System.out.println(arr[index]);
     }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter array size : ");
+        int n = sc.nextInt();
+        System.out.print("Enter " + n + " Elements: ");
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        moveZerosToEnd(arr, n);
+        for (int i = 0; i < n; i++)
+            System.out.print(arr[i] + " ");
+    }
+
 }
