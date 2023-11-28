@@ -1,10 +1,11 @@
 /* Find the index of the first occurrence of a given element x in an array? It is given that the array is
-sorted? If no occurrence of x is found then return -1. */
+sorted? If no occurrence of x is found then return -1. -> using recursion  */
 package BinarySearch;
 
 import java.util.*;
 
 public class BinarySearch_02 {
+    // Method to find the First Occurance of the array values
     public static int firstOccurance(int[] a, int target) {
         int n = a.length;
         int start = 0, end = n - 1, ans = -1;
