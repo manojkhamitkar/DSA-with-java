@@ -18,10 +18,10 @@ public class Linked_list_01 {
         Node e = new Node(0);
 
         // 5 -> 4 -> 1 -> 9 -> 0
-        a.next = b;
-        b.next = c;
-        c.next = d;
-        d.next = e;
+        a.next = b; // 5 -> 4 1 9 0
+        b.next = c;// 5 -> 4 -> 1 9 0
+        c.next = d;// 5 -> 4 -> 1 -> 9 0
+        d.next = e;// 5 -> 4 -> 1 -> 9 -> 0
         System.out.print(a.data + " ");
         System.out.print(a.next.data + " ");
         System.out.print(a.next.next.data + " ");
