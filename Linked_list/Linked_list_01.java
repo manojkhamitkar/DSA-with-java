@@ -30,7 +30,14 @@ public class Linked_list_01 {
         // System.out.print(a.next.next.next.next.data + " ");
 
         Node temp = a;
+        // Iterate over using the for loop.
         for (int i = 1; i <= 5; i++) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+
+        // iterate over using the while loop.
+        while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
