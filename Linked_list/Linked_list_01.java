@@ -31,16 +31,12 @@ public class Linked_list_01 {
 
         Node temp = a;
         // Iterate over using the for loop.
+        System.out.println("printing list using for loop");
         for (int i = 1; i <= 5; i++) {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
 
-        // iterate over using the while loop.
-        while (temp != null) {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
-        }
-
     }
+
 }
