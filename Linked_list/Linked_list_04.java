@@ -10,7 +10,8 @@ public class Linked_list_04 {
             this.data = data;
         }
 
-        public static int length(Node head) {
+        // method to find length of linked list iteratively.
+        public static int length_1(Node head) {
             int count = 0;
             while (head != null) {
                 count++;
@@ -18,6 +19,19 @@ public class Linked_list_04 {
 
             }
             return count;
+        }
+
+        // method to find length of linked list recursively.
+        public static int length_2(Node head) {
+
+            int count = 0;
+            if (head == null)
+                return 0;
+            else {
+                count = 1 + length_2(head.next);
+                return count;
+            }
+
         }
 
         public static void main(String[] args) {
@@ -30,7 +44,9 @@ public class Linked_list_04 {
             b.next = c;
             c.next = d;
             d.next = e;
-            System.out.println(length(a));
+            System.out.println(length_1(a));
+            System.out.println(length_2(a));
+
         }
     }
 }
