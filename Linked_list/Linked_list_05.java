@@ -15,6 +15,7 @@ public class Linked_list_05 {
         Node head = null;
         Node tail = null;
 
+        // Function to insert a node at the end of the linked list.
         void insertAtEnd(int val) {
             Node temp = new Node(val);
             if (head == null) {
@@ -24,6 +25,17 @@ public class Linked_list_05 {
             }
             tail = temp;
 
+        }
+
+        // function to find the size of the linked list.
+        int size() {
+            int count = 0;
+            Node temp = head;
+            while (temp != null) {
+                count++;
+                temp = temp.next;
+            }
+            return count;
         }
 
         void display() {
@@ -40,6 +52,8 @@ public class Linked_list_05 {
         ll.insertAtEnd(4);
         ll.insertAtEnd(5);
         ll.display();
+        System.out.println();
+        System.out.println(ll.size());
 
     }
 }
