@@ -64,9 +64,11 @@ public class Linked_list_05 {
         linkedlist ll = new linkedlist();
         ll.insertAtEnd(4);
         ll.insertAtEnd(5);
+        System.out.println("Insertion at end of linkedlist");
         ll.display();
-        System.out.println();
+        System.out.println("\nSize of linkedlist");
         System.out.println(ll.size());
+        System.out.println("Insertion at head of linkedlist");
         ll.insertAtHead(1);
         ll.insertAtHead(9);
         ll.display();
