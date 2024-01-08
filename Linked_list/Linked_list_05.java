@@ -27,6 +27,19 @@ public class Linked_list_05 {
 
         }
 
+        // Function to insert a node at the head of the linked list
+        void insertAtHead(int val) {
+            Node temp = new Node(val);
+            if (head == null) {
+                head = tail = temp;
+
+            } else {
+                temp.next = head;
+                head = temp;
+            }
+
+        }
+
         // function to find the size of the linked list.
         int size() {
             int count = 0;
@@ -54,6 +67,8 @@ public class Linked_list_05 {
         ll.display();
         System.out.println();
         System.out.println(ll.size());
-
+        ll.insertAtHead(1);
+        ll.insertAtHead(9);
+        ll.display();
     }
 }
