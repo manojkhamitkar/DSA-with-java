@@ -31,13 +31,24 @@ public class Linked_list_05 {
         void insertAtHead(int val) {
             Node temp = new Node(val);
             if (head == null) {
-                head = tail = temp;
+                insertAtEnd(val);
 
             } else {
                 temp.next = head;
                 head = temp;
             }
 
+        }
+
+        // Function to insert a node at the ith index .
+        void insertAtIndex(int index, int val) {
+            Node t = new Node(val);
+            Node temp = head;
+            for (int i = 1; i <= index; i++) {
+                temp = temp.next;
+            }
+            t.next = temp.next;
+            temp.next = t;
         }
 
         // function to find the size of the linked list.
@@ -65,12 +76,16 @@ public class Linked_list_05 {
         ll.insertAtEnd(4);
         ll.insertAtEnd(5);
         System.out.println("Insertion at end of linkedlist");
-        ll.display();
-        System.out.println("\nSize of linkedlist");
-        System.out.println(ll.size());
+        ll.display(); // 4 5
         System.out.println("Insertion at head of linkedlist");
         ll.insertAtHead(1);
         ll.insertAtHead(9);
+        ll.display(); // 9 1 4 5
+        ll.insertAtIndex(2, 10);
+        ll.insertAtIndex(0, 8);
+        System.out.println("\nInsertion at given index"); // 9 1 10 4 5
         ll.display();
+        System.out.println("\nSize of linkedlist");
+        System.out.println(ll.size());
     }
 }
