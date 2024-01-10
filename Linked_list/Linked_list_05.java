@@ -44,16 +44,21 @@ public class Linked_list_05 {
         void insertAtIndex(int index, int val) {
             Node t = new Node(val);
             Node temp = head;
-            for (int i = 1; i <= index; i++) {
-                temp = temp.next;
-
+            if (index == size()) {
+                insertAtEnd(val);
+                return;
             }
-            if (index == 0) {
+
+            else if (index == 0) {
                 insertAtHead(val);
                 return;
 
-            }
-            t.next = temp.next;
+            } else if (index < 0 || index > size()) {
+                System.out.print("\nplease insert into correct node");
+                return;
+
+            } else
+                t.next = temp.next;
             temp.next = t;
         }
 
@@ -89,6 +94,7 @@ public class Linked_list_05 {
         ll.display(); // 9 1 4 5
         ll.insertAtIndex(2, 10);
         ll.insertAtIndex(0, 8);
+        ll.insertAtIndex(7, 1);
         System.out.println("\nInsertion at given index"); // 8 9 10 1 4 5
         ll.display();
         System.out.println("\nSize of linkedlist");
