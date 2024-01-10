@@ -62,6 +62,19 @@ public class Linked_list_05 {
             temp.next = t;
         }
 
+        // method to return the element at any given index of linked list.
+        int getAt(int index) {
+            if (index < 0 || index > index) {
+                System.out.println("Wrong Index");
+                return -1;
+            }
+            Node temp = head;
+            for (int i = 1; i <= index; i++) {
+                temp = head.next;
+            }
+            return temp.data;
+        }
+
         // function to find the size of the linked list.
         int size() {
             int count = 0;
@@ -99,5 +112,6 @@ public class Linked_list_05 {
         ll.display();
         System.out.println("\nSize of linkedlist");
         System.out.println(ll.size());
+        System.out.println(ll.getAt(4));
     }
 }
