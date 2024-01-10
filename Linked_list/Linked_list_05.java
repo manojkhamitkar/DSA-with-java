@@ -63,16 +63,33 @@ public class Linked_list_05 {
         }
 
         // method to return the element at any given index of linked list.
-        int getAt(int index) {
-            if (index < 0 || index > index) {
-                System.out.println("Wrong Index");
-                return -1;
+        int getElement(Node head, int index, int currIndex) {
+            if (head == null) {
+                return -1; // index doesn't exist in the linked list
             }
-            Node temp = head;
-            for (int i = 1; i <= index; i++) {
-                temp = head.next;
+            if (index == currIndex) {
+                return head.data;
             }
-            return temp.data;
+            return getElement(head.next, index, currIndex + 1);
+        }
+
+        // Deletion at kth index in a singly linked list
+        public Node deleteAtIndex(Node head, int index) {
+            if (index == 0) {
+                // deleting from the start
+                Node temp = head;
+                head = head.next;
+                return head;
+            }
+            Node prevNode = head;
+            int currIndex = 0;
+            while (currIndex != index - 1) {
+                prevNode = prevNode.next;
+                currIndex++;
+            }
+            Node temp = prevNode.next;
+            prevNode.next = prevNode.next.next;
+            return head;
         }
 
         // function to find the size of the linked list.
@@ -112,6 +129,10 @@ public class Linked_list_05 {
         ll.display();
         System.out.println("\nSize of linkedlist");
         System.out.println(ll.size());
-        System.out.println(ll.getAt(4));
+        System.out.println(ll.getElement(ll.head, 2, 0));
+        // ll.getElement(null, 0, 0)
+        System.out.println("deletion of node ");
+        ll.deleteAtIndex(ll.head, 4);
+        ll.display();
     }
 }
