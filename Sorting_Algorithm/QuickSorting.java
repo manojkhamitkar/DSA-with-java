@@ -4,37 +4,52 @@ package Sorting_Algorithm;
 import java.util.*;
 
 public class QuickSorting {
-    int partition(int arr[], int first, int last) {
-        int pivot = arr[last];
-        int i = (first - 1);
-        for (int j = first; j < last; j++) {
-            if (arr[j] <= pivot) {
+
+    static void display(int arr[]) {
+        // int i;
+        for (int val : arr) {
+            System.out.print(val + " ");
+
+        }
+    }
+
+    // method to swap variables
+    static void swap(int[] arr, int x, int y) {
+        int temp = arr[x];
+        arr[x] = arr[y];
+        arr[y] = temp;
+    }
+
+    static int partition(int[] arr, int st, int end) {
+        int pivot = arr[st];
+        int cnt = 0;
+        for (int i = st + 1; i <= end; i++) {
+            if (arr[i] <= pivot)
+                cnt++;
+        }
+        int pivotIdx = st + cnt;
+        swap(arr, st, pivotIdx);
+        int i = st, j = end;
+        while (i < pivotIdx && j > pivotIdx) {
+            while (arr[i] <= pivot)
                 i++;
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+            while (arr[j] > pivot)
+                j--;
+            if (i < pivotIdx && j > pivotIdx) {
+                swap(arr, i, j);
+                i++;
+                j--;
             }
         }
-        int temp = arr[i + 1];
-        arr[i + 1] = arr[last];
-        arr[last] = temp;
-        return i + 1;
+        return pivotIdx;
     }
 
-    public void quickSort(int arr[], int first, int last) {
-        if (first < last) {
-            int pivot = partition(arr, first, last);
-            quickSort(arr, first, pivot - 1);
-            quickSort(arr, pivot + 1, last);
-        }
-    }
-
-    static void display(int arr[], int n) {
-        // int i;
-        for (int i : arr) {
-            System.out.println(arr[i] + " ");
-
-        }
+    static void quickSort(int arr[], int st, int end) {
+        if (st >= end)
+            return;
+        int pivot = partition(arr, st, end);
+        quickSort(arr, st, pivot - 1);
+        quickSort(arr, pivot + 1, end);
     }
 
     public static void main(String[] args) {
@@ -44,7 +59,12 @@ public class QuickSorting {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        System.out.println("Before sorting");
-        display(arr, n);
+        System.out.print("Before sorting\n" + " ");
+        display(arr);
+        System.out.println();
+        quickSort(arr, 0, arr.length - 1);
+        System.out.print("Array after sorting\n");
+        display(arr);
+
     }
 }
