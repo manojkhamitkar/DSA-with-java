@@ -15,7 +15,7 @@ class Node {
 }
 
 public class Practice_01 {
-
+    // -> Method-I
     public static Node nthNode(Node head, int n) {
         int size = 0;
         Node temp = head;
@@ -32,6 +32,7 @@ public class Practice_01 {
         return temp;
     }
 
+    // -> Method - II
     public static Node nthNode2(Node head, int n) {
         Node slow = head;
         Node fast = head;
@@ -57,7 +58,7 @@ public class Practice_01 {
         c.next = d;
         d.next = e;
         e.next = f;
-        Node q = nthNode2(a, 6);
+        Node q = nthNode(a, 1);
         System.out.println(q.data);
 
     }
