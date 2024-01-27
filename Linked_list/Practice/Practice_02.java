@@ -27,20 +27,6 @@ public class Practice_02 {
 
     }
 
-    public static int getIntersectionNode(Node headA, Node headB) {
-        while (headA != null) {
-            Node temp = headB;
-            while (temp != null) {
-                if (headA == temp) {
-                    return headA.data;
-                }
-                temp = temp.next;
-            }
-            headA = headA.next;
-        }
-        return -1;
-    }
-
     static void display(Node head) {
         Node temp = head;
         while (temp != null) {
