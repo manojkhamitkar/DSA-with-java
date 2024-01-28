@@ -1,4 +1,4 @@
-// Reserve of linked list by recursion and with pointers.
+// Reserve of linked list by recursion.
 package Linked_list.Practice;
 
 public class Practice_04 {
@@ -15,7 +15,7 @@ public class Practice_04 {
         if (head.next == null)
             return head;
         Node newHead = recursionReverse(head.next);
-        head.next = head;
+        head.next.next = head;
         head.next = null;
         return newHead;
 
@@ -26,19 +26,6 @@ public class Practice_04 {
             return;
         display(head.next);
         System.out.println(head.data + " ");
-    }
-
-    static Node pointerReverse(Node head) {
-        Node curr = head;
-        Node Next = null;
-        Node prev = null;
-        while (curr != null) {
-            Next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = Next;
-        }
-        return prev;
     }
 
     public static void display(Node head) {
@@ -63,11 +50,9 @@ public class Practice_04 {
         d.next = e;
         e.next = f;
         display(a);
-        pointerReverse(a);
-        // displayList(a);
+        System.out.println("Reversed list using recursion");
         Node r = recursionReverse(a);
-        displayrev(r);
-
+        display(r);
     }
 
 }
