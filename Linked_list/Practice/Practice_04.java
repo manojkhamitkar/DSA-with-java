@@ -21,11 +21,18 @@ public class Practice_04 {
 
     }
 
+    public static void displayrev(Node head) {
+        if (head == null)
+            return;
+        display(head.next);
+        System.out.println(head.data + " ");
+    }
+
     static Node pointerReverse(Node head) {
         Node curr = head;
         Node Next = null;
         Node prev = null;
-        if (curr != null) {
+        while (curr != null) {
             Next = curr.next;
             curr.next = prev;
             prev = curr;
@@ -34,13 +41,13 @@ public class Practice_04 {
         return prev;
     }
 
-    static void displayList(Node head) {
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
+    public static void display(Node head) {
+        if (head == null) {
+            System.out.println();
+            return;
         }
-        System.out.println();
+        System.out.print(head.data + " ");
+        display(head.next);
     }
 
     public static void main(String[] args) {
@@ -55,11 +62,11 @@ public class Practice_04 {
         c.next = d;
         d.next = e;
         e.next = f;
-        // displayList(a);
+        display(a);
         pointerReverse(a);
         // displayList(a);
         Node r = recursionReverse(a);
-        displayList(r);
+        displayrev(r);
 
     }
 
