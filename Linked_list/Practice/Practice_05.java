@@ -11,6 +11,7 @@ public class Practice_05 {
         }
     }
 
+    // method to revese the linked list
     public static Node reverse(Node head) {
         Node curr = head;
         Node Next = null;
@@ -25,6 +26,7 @@ public class Practice_05 {
 
     }
 
+    // method to display the list.
     public static void display(Node head) {
         Node temp = head;
         while (temp != null) {
@@ -45,9 +47,9 @@ public class Practice_05 {
         b.next = c;
         c.next = d;
         d.next = e;
-        display(a);
+        display(a); // 1 8 4 10 24
         a = reverse(a);
-        display(a);
+        display(a); // 24 10 4 8 1
     }
 
 }
