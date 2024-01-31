@@ -6,8 +6,13 @@ public class Practice_06 {
         int data;
         Node next;
 
-        Node(int data) {
-            this.data = data;
+        public static class Node {
+            this.data=data;
+            Node next;
+
+            public Node(int data){
+                this.data = data;
+            }
         }
     }
 
