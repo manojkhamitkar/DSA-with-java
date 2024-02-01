@@ -1,4 +1,5 @@
 // check if th linked list is palindrome or not.
+// Find the middle element of the given linked list.
 package Linked_list.Practice;
 
 public class Practice_06 {
@@ -6,18 +7,29 @@ public class Practice_06 {
         int data;
         Node next;
 
-        public static class Node {
-            this.data=data;
-            Node next;
-
-            public Node(int data){
-                this.data = data;
-            }
+        Node(int data) {
+            this.data = data;
         }
     }
 
-    public static boolean isPalindrome(Node head) {
-        return true;
+    public static Node middleElement(Node head) {
+        Node slow = head;
+        Node fast = head;
+        while (fast.next != null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    public static void display(Node head) {
+        Node temp = head;
+        while (temp == null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+
     }
 
     public static void main(String[] args) {
@@ -30,6 +42,8 @@ public class Practice_06 {
         b.next = c;
         c.next = d;
         d.next = e;
-        System.out.println();
+        display(a);
+        a = middleElement(a);
+        display(a);
     }
 }
