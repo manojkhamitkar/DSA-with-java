@@ -15,16 +15,17 @@ public class Practice_06 {
     public static Node middleElement(Node head) {
         Node slow = head;
         Node fast = head;
-        while (fast.next != null && fast.next.next != null) {
-            fast = fast.next.next;
+        while (fast != null && fast.next != null) {
             slow = slow.next;
+            fast = fast.next.next;
         }
+
         return slow;
     }
 
     public static void display(Node head) {
         Node temp = head;
-        while (temp == null) {
+        while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
