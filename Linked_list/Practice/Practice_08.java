@@ -14,11 +14,19 @@ public class Practice_08 {
     }
 
     static boolean hasCycle(Node head) {
+        if (head == null)
+            return false;
+        if (head.next == null)
+            return false;
         Node slow = head;
         Node fast = head;
         while (fast != null) {
-            fast = fast.next.next;
+            if (slow == null)
+                return false;
             slow = slow.next;
+            if (fast.next == null)
+                return false;
+            fast = fast.next.next;
         }
         if (fast == slow)
             return true;
