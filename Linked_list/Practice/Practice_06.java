@@ -1,4 +1,3 @@
-// check if th linked list is palindrome or not.
 // Find the middle element of the given linked list.
 package Linked_list.Practice;
 
