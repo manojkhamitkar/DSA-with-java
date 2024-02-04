@@ -11,7 +11,6 @@ public class Linked_list_02 {
         }
 
         public static void display(Node head) {
-
             Node next = head;
             // iterating using the while loop
             while (head != null) {

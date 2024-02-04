@@ -23,7 +23,6 @@ public class Linked_list_05 {
                 tail.next = temp;
             }
             tail = temp;
-
         }
 
         // Function to insert a node at the head of the linked list

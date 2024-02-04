@@ -31,6 +31,5 @@ public class Linked_list_03 {
             System.out.println("Displaying Linked list using  ");
             display(a);
         }
-
     }
 }

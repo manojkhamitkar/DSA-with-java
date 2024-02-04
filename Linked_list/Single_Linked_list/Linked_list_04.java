@@ -22,7 +22,6 @@ public class Linked_list_04 {
 
         // method to find length of linked list recursively.
         public static int length_2(Node head) {
-
             int count = 0;
             if (head == null)
                 return 0;
