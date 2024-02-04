@@ -1,5 +1,4 @@
-package Linked_list;
-
+//package Linked_list;
 public class Linked_list_01 {
     public static class Node {
         int data;

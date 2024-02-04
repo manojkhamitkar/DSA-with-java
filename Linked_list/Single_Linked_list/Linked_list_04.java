@@ -1,5 +1,4 @@
 // Lenght of the   linked list
-package Linked_list;
 
 public class Linked_list_04 {
     static class Node {
