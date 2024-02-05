@@ -1,4 +1,4 @@
-// package Linked_list;
+package Linked_list.Single_Linked_list;
 
 public class Linked_list_02 {
     public static class Node {
