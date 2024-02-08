@@ -24,6 +24,10 @@ public class Pratice_10 {
         return prev;
     }
 
+    public static Node Reverse(Node head) {
+
+    }
+
     public static Node isPalindorme(Node head) {
 
     }
