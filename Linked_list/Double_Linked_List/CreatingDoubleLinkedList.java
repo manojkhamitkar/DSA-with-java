@@ -16,7 +16,8 @@ public class CreatingDoubleLinkedList {
     public static void display(Node head) {
         while (head.next != null) {
             System.out.print(head.val + " ");
-            head = head.next;
+            // head = head.next;
+            head = head.prev;
         }
         System.out.println();
     }
@@ -37,7 +38,7 @@ public class CreatingDoubleLinkedList {
         d.prev = c;
         e.next = null;
         e.prev = d;
-        display(a);
+        display(e);
 
     }
 
