@@ -23,6 +23,7 @@ public class CreatingDoubleLinkedList {
         System.out.println();
     }
 
+    // Dispplay the list in reverse order.
     public static void displayRev(Node tail) {
         Node temp = tail;
         while (temp != null) {
@@ -49,8 +50,8 @@ public class CreatingDoubleLinkedList {
         d.next = e;
         e.prev = d;
         e.next = null;
-        display(a);
-        displayRev(e);
+        display(a); // 5 4 1 9 2
+        displayRev(e); // 2 9 1 4 5
 
     }
 
