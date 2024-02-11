@@ -14,10 +14,21 @@ public class CreatingDoubleLinkedList {
     }
 
     public static void display(Node head) {
-        while (head.next != null) {
-            System.out.print(head.val + " ");
-            // head = head.next;
-            head = head.prev;
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.val + " ");
+            temp = temp.next;
+
+        }
+        System.out.println();
+    }
+
+    public static void displayRev(Node tail) {
+        Node temp = tail;
+        while (temp != null) {
+            System.out.print(temp.val + " ");
+            temp = temp.prev;
+
         }
         System.out.println();
     }
@@ -27,18 +38,19 @@ public class CreatingDoubleLinkedList {
         Node b = new Node(4);
         Node c = new Node(1);
         Node d = new Node(9);
-        Node e = new Node(0);
-        a.next = b;
+        Node e = new Node(2);
         a.prev = null;
-        b.next = c;
+        a.next = b;
         b.prev = a;
-        c.next = d;
+        b.next = c;
         c.prev = b;
-        d.next = e;
+        c.next = d;
         d.prev = c;
-        e.next = null;
+        d.next = e;
         e.prev = d;
-        display(e);
+        e.next = null;
+        display(a);
+        displayRev(e);
 
     }
 
