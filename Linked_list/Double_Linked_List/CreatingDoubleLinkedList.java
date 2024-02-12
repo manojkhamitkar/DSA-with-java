@@ -34,6 +34,21 @@ public class CreatingDoubleLinkedList {
         System.out.println();
     }
 
+    public static void displayRandom(Node ramdom) {
+        Node temp = ramdom;
+        // Move the node till head of the list
+        while (temp.prev != null) {
+            temp = temp.prev;
+        }
+        // print the list from the head
+        while (temp != null) {
+            System.out.print(temp.val + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+
+    }
+
     public static void main(String[] args) {
         Node a = new Node(5);
         Node b = new Node(4);
@@ -50,8 +65,12 @@ public class CreatingDoubleLinkedList {
         d.next = e;
         e.prev = d;
         e.next = null;
+        System.out.println("Displaying Linked list");
         display(a); // 5 4 1 9 2
+        System.out.println("Displaying Reverse Linked list");
         displayRev(e); // 2 9 1 4 5
+        System.out.println("Displaying Linked list using random node");
+        displayRandom(c); // 5 4 1 9 2
 
     }
 
