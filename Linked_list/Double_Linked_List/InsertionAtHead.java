@@ -14,11 +14,11 @@ public class InsertionAtHead {
     }
 
     // inserting a node at the head
-    public static Node insertNode(Node head, int x) {
+    public static Node insertAtNode(Node head, int x) {
         Node t = new Node(30);
         t.next = head;
         head.prev = t;
-        t = head;
+        head = t;
         return head;
 
     }
@@ -50,7 +50,7 @@ public class InsertionAtHead {
         e.prev = d;
         e.next = null;
         display(a);
-        Node newHead = insertNode(a, 35);
+        Node newHead = insertAtNode(a, 35);
         display(newHead);
 
     }
