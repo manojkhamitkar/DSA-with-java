@@ -23,6 +23,16 @@ public class Delete {
 
     }
 
+    // method to Delete a tail node
+    public static Node deleteNodeAtTail(Node head) {
+        return head;
+    }
+
+    // method to Delete a node at a given position
+    public static Node deleteNodeAtIndex(Node head, int index) {
+        return head;
+    }
+
     public static void display(Node head) {
         while (head != null) {
             System.out.print(head.val + " ");
