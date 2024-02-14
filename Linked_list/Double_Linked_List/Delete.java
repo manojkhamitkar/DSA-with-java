@@ -25,6 +25,13 @@ public class Delete {
 
     // method to Delete a tail node
     public static Node deleteNodeAtTail(Node head) {
+        Node tail = head;
+        while (tail.next != null) {
+            tail = tail.next;
+
+        }
+        tail = tail.prev;
+        tail.next = null;
         return head;
     }
 
@@ -68,6 +75,9 @@ public class Delete {
         Node delete = deleteNodeAtHead(a);
         System.out.println("\nLinked list after deleting  head node");
         display(delete);
+        System.out.println("\nLinked list after deleting tail node");
+        Node y = deleteNodeAtTail(delete);
+        display(y);
 
     }
 
