@@ -38,11 +38,15 @@ public class Delete {
     // method to Delete a node at a given position
     public static Node deleteNodeAtIndex(Node head, int index) {
         Node temp = head;
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < index - 1; i++) {
             temp = temp.next;
         }
         temp.next = temp.next.next;
         temp.next.prev = temp;
+        if (temp != null) {
+            // we are not deleting the tail
+            temp.next.prev = temp.next;
+        }
         return head;
     }
 
@@ -85,7 +89,7 @@ public class Delete {
         Node y = deleteNodeAtTail(delete);
         display(y);
         System.out.println("\nLinked list after deleting given index node");
-        Node m = deleteNodeAtIndex(a, 3);
+        Node m = deleteNodeAtIndex(a, 2);
         display(m);
 
     }
