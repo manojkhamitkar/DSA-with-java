@@ -12,6 +12,21 @@ public class CircularLinkedList {
 
     }
 
+    public static void insertion(Node head, Node tail) {
+        Node temp = head;
+        // while (temp.next != null) {
+        // temp = temp.next;
+        // }
+        temp.next = tail;
+        tail.prev = temp;
+        tail.next = head;
+        head.prev = tail;
+        // temp.next = head;
+        // head.prev = temp;
+        // temp.prev = tail;
+        // temp.next = tail;
+    }
+
     public static boolean isCircular(Node head) {
         Node slow = head;
         Node fast = head;
@@ -57,8 +72,10 @@ public class CircularLinkedList {
         e.next = f;
         e.prev = e;
         e.next = a;
-        // display(a);
-        isCircular(a);
+        display(a);
+        // isCircular(a);
+        insertion(a, e);
+        display(a);
 
     }
 
