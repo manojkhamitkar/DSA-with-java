@@ -16,13 +16,16 @@ public class CircularLinkedList {
         Node slow = head;
         Node fast = head;
         while (fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+
             if (fast == slow) {
-                fast = fast.next.next;
-                slow = slow.next;
+                break;// return true;
             }
             return true;
         }
         return false;
+
     }
 
     public static void display(Node head) {
