@@ -38,16 +38,15 @@ public class Delete {
     // method to Delete a node at a given position
     public static Node deleteNodeAtIndex(Node head, int index) {
         Node temp = head;
-        for (int i = 0; i < index - 1; i++) {
-            temp = temp.next;
+        Node pref = head;
+        for (int i = 0; i < index; i++) {
+            temp = pref;
+            pref = pref.next;
         }
-        temp.next = temp.next.next;
-        temp.next.prev = temp;
-        if (temp != null) {
-            // we are not deleting the tail
-            temp.next.prev = temp.next;
-        }
+        temp.next = pref.next;
+        pref.next.prev = temp;
         return head;
+
     }
 
     public static void display(Node head) {
@@ -66,7 +65,7 @@ public class Delete {
         Node e = new Node(30);
         Node f = new Node(8);
         Node g = new Node(0);
-        a.prev = null;
+        // a.prev = null;
         a.next = b;
         b.prev = a;
         b.next = c;
@@ -79,18 +78,18 @@ public class Delete {
         f.prev = e;
         f.next = g;
         g.prev = f;
-        g.next = null;
+        // g.next = null;
 
         display(a);
-        Node delete = deleteNodeAtHead(a);
-        System.out.println("\nLinked list after deleting  head node");
-        display(delete);
+        Node h = deleteNodeAtHead(a);
+        // System.out.println("\nLinked list after deleting head node");
+        // display(delete);
         System.out.println("\nLinked list after deleting tail node");
-        Node y = deleteNodeAtTail(delete);
-        display(y);
+        Node t = deleteNodeAtTail(a);
+        display(t);
         System.out.println("\nLinked list after deleting given index node");
-        Node m = deleteNodeAtIndex(a, 2);
-        display(m);
+        Node i = deleteNodeAtIndex(t, 2);
+        display(i);
 
     }
 
