@@ -11,27 +11,74 @@ public class Insertion {
             this.next = null;
             this.prev = null;
         }
+
+    }
+
+    Node head = null;
+    Node tail = null;
+
+    // Method to make Double Linked List as Circular
+    public void add(int val) {
+        Node newNode = new Node(val);
+        if (head == null) {
+
+            head = newNode;
+            tail = newNode;
+            newNode.next = head;
+            newNode.prev = tail;
+
+        } else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+            tail.next = head;
+            head.prev = tail;
+
+        }
+
+    }
+
+    public void insertAtHead(int val) {
+        Node newNode = new Node(val);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+            newNode.next = head;
+            newNode.prev = tail;
+
+        } else {
+            newNode.next = head;
+            head.prev = newNode;
+            newNode.prev = tail;
+            tail.next = newNode;
+            head = newNode;
+        }
+    }
+
+    public void display() {
+        Node temp = head;
+        if (head == null) {
+            System.out.println("Empty Linked list");
+
+        } else {
+            do {
+                System.out.println(temp.val + " ");
+                temp = temp.next;
+            } while (temp != head);
+
+        }
+
     }
 
     public static void main(String[] args) {
-        Node a = new Node(4);
-        Node b = new Node(7);
-        Node c = new Node(60);
-        Node d = new Node(1);
-        Node e = new Node(9);
-        Node f = new Node(3);
-        a.prev = e;
-        a.next = b;
-        b.prev = a;
-        b.next = c;
-        c.prev = b;
-        c.next = d;
-        d.prev = c;
-        d.next = e;
-        e.prev = d;
-        e.next = f;
-        e.prev = e;
-        e.next = a;
+        CircularLinkedList cll = new CircularLinkedList();
+        cll.add(30);
+        cll.add(1);
+        cll.add(7);
+        cll.add(6);
+        cll.display();
+        cll.insertAtHead(2);
+        cll.display();
 
     }
 
