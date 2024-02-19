@@ -50,6 +50,7 @@ public class InsertionAtIndex {
         ll.add(6);
         ll.display();
         ll.insertAtIndex(3, 66);
+        ll.display();
 
     }
 
