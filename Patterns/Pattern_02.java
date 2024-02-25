@@ -1,3 +1,4 @@
+// to print the rectangle pattern
 package Patterns;
 
 public class Pattern_02 {
