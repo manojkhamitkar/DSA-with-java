@@ -4,9 +4,9 @@ import java.util.*;
 
 public class Pattern_07 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number: ");
-        int n = sc.nextInt();
+        int n = scanner.nextInt();
         // printing a sqaure pattern.
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n + 1; j++) {
