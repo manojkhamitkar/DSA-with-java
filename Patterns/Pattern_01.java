@@ -9,6 +9,7 @@ public class Pattern_01 {
                 System.out.print("*" + " ");
             }
             System.out.println();
+
         }
 
     }
