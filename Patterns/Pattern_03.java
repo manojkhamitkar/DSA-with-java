@@ -5,6 +5,7 @@ public class Pattern_03 {
         int n = 21;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
+                // Hallow Sqaure Pattern with cross inside
                 if (i == 0 || j == 0 || j == n - 1 || i == n - 1 || i + j == n - 1 || i - j == 0) {
                     System.out.print("*");
                 } else {

@@ -7,8 +7,9 @@ public class Pattern_29 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number of lines: ");
         int n = scanner.nextInt();
+        int nsp = 1;
+        int nst = 1;
 
-        // int space = 1;
         for (int i = 1; i <= n; i++) { // rows
 
             System.out.println();
