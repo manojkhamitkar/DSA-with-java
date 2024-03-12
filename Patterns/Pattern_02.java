@@ -15,6 +15,7 @@ public class Pattern_02 {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
+
                 }
 
             }
