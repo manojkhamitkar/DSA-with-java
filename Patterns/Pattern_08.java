@@ -7,7 +7,7 @@ public class Pattern_08 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int n = scanner.nextInt();
-        // To Print reverse triagle pattern.
+        // reverse triagle pattern.
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n + 1 - i; j++) {
                 System.out.print("*" + " ");
